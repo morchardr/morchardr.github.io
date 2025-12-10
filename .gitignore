@@ -9,3 +9,4 @@
 # Mantener estos (son importantes)
 # !renv.lock
 # !_freeze/
+**/*.quarto_ipynb

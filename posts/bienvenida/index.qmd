@@ -1,0 +1,29 @@
+---
+title: "Prueba #1: Configuración del Blog"
+description: "Entrada simulada para verificar visualización de estilos, fechas y categorías en la nueva sección de noticias."
+author: "Admin"
+date: "2025-01-01"
+categories: [Sistema, Prueba]
+image: ../../img/perfil.jpg
+draft: false
+---
+
+## Estado: En Construcción 🚧
+
+:::{.center}
+![](../../img/perfil.jpg){width=60% alt="Foto de perfil"}
+:::
+
+Esta entrada existe únicamente para **probar la maquetación** de la sección de blog. Una vez que el sitio esté oficializado, esta entrada será eliminada o reemplazada por la primera columna real.
+
+### ¿Qué evaluamos aquí?
+
+Este texto sirve para revisar:
+
+1.  Que la **tipografía** del cuerpo (Inter) sea legible.
+2.  Que los **encabezados** (Lora) tengan el peso correcto.
+3.  Que el espaciado entre párrafos sea cómodo.
+
+> "Esta es una cita de prueba para verificar cómo se comporta el componente `blockquote` en el diseño visual del sitio."
+
+Si estás leyendo esto, significa que el despliegue técnico del blog ha sido exitoso.

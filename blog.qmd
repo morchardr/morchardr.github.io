@@ -1,0 +1,16 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  # AQUÍ ESTÁ EL CAMBIO: Agregamos "image" al principio de la lista
+  fields: [image, date, title, reading-time, description, categories]
+page-layout: full
+title-block-banner: false
+---
+
+Espacio de difusión de columnas de opinión, novedades de investigación y actividades públicas.
