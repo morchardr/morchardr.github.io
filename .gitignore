@@ -1,4 +1,11 @@
+/.quarto/
+/_site/
+/site_libs/
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Mantener estos (son importantes)
+# !renv.lock
+# !_freeze/
