@@ -1,0 +1,30 @@
+---
+title: "Proyectos"
+---
+
+## Proyecto PARES – Parto respetado y dignidad
+
+::: columns
+::: {.column width="22%"}
+![](img/pares.jpg){width=120 fig-alt="Icono violeta con silueta de mujer embarazada y un corazón"}
+:::
+::: {.column width="78%"}
+
+Soy investigadora responsable del proyecto Fondecyt de iniciación  
+**“Construyendo respeto y dignidad: un estudio sobre el movimiento de parto respetado”**, conocido como **Proyecto PARES**.
+
+En este estudio analizamos cómo las mujeres que están gestando en Chile **esperan ser tratadas** en el parto y cómo evalúan posteriormente la experiencia que vivieron. Nos interesa comprender:
+
+- qué entienden por **parto respetado** y por trato digno;  
+- cómo se construyen y disputan las **demandas de respeto** en el ámbito de la salud;  
+- de qué manera influyen factores como clase social, nacionalidad u otras desigualdades en estas experiencias.
+
+El proyecto combina **encuestas pre y post parto**, entrevistas en profundidad y análisis de discursos y marcos normativos, articulando un enfoque de **sociología del respeto** con debates sobre justicia reproductiva y violencia obstétrica.
+
+**Redes del proyecto:**
+
+- Instagram: [@proyecto_pares](https://www.instagram.com/proyecto_pares/)  
+- X (Twitter): [@proyecto_pares](https://x.com/proyecto_pares)  
+- LinkedIn: [Proyecto PARES](https://www.linkedin.com/company/proyecto-pares/)
+:::
+:::

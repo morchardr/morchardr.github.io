@@ -1,0 +1,79 @@
+/*-- scss:defaults --*/
+
+/* 1. VARIABLES LIGHT */
+$brand-purple: #b574b6;       /* Color de identidad */
+$brand-dark: #2c2c2c;         
+$link-color: $brand-purple;
+$link-hover-color: darken($brand-purple, 15%);
+$body-color: $brand-dark;
+$primary: $brand-purple;
+
+/* 2. VARIABLES NAVBAR LIGHT */
+$navbar-bg: rgba(255, 255, 255, 0.95);
+$navbar-fg: $brand-dark;
+$navbar-brand-color: $brand-dark;
+
+/*-- scss:rules --*/
+
+/* 3. IMPORTAR COMUNES */
+@import "common";
+
+/* 4. REGLAS DE COLOR ESPECÍFICAS (LIGHT) */
+
+h1, h2, h3, h4, h5 {
+  color: #1a1a1a;
+}
+
+.navbar .nav-link {
+  color: #555 !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: $brand-purple !important;
+}
+
+/* Foto Perfil: Borde blanco */
+img.about-image {
+  border: 4px solid #ffffff; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important; 
+}
+
+/* Botones: Morados sobre blanco */
+.about-link {
+  color: $brand-purple !important;
+  border: 1.5px solid $brand-purple !important;
+}
+
+.about-link:hover {
+  background-color: $brand-purple !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(181, 116, 182, 0.4);
+}
+
+/* Callouts */
+.callout {
+  border-left-color: $brand-purple !important; 
+}
+.callout .callout-header {
+  color: darken($brand-purple, 10%) !important;
+}
+.callout .callout-icon {
+  color: $brand-purple !important;
+}
+
+/* === FOOTER LIGHT (CORREGIDO) === */
+.footer {
+  /* Cambio clave: Transparente para que no parezca un parche gris */
+  background-color: transparent !important; 
+  color: #6c757d !important;
+  
+  /* Línea sutil para separar, pero elegante */
+  border-top: 1px solid rgba(0, 0, 0, 0.08); 
+}
+
+.footer a {
+    color: $brand-purple;
+    text-decoration: none;
+}

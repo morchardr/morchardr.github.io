@@ -1,0 +1,142 @@
+/* _common.scss: Reglas estructurales compartidas */
+
+/* === TIPOGRAFÍA GENERAL === */
+h1, h2, h3, h4, h5 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+/* === NAVBAR === */
+.navbar-brand {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-block: 0.8rem !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Iconos Navbar uniformes */
+.navbar .nav-link i,
+.navbar .nav-link svg {
+  font-size: 1.15rem;
+  vertical-align: text-bottom;
+  opacity: 0.85;
+}
+
+.navbar .nav-link:hover i,
+.navbar .nav-link:hover svg {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+/* === SIDEBAR Y PERFIL (Corrección Definitiva) === */
+
+/* 1. LA FOTO (Arreglo del "achatamiento") */
+img.about-image {
+  /* Esto asegura que sea un círculo perfecto siempre */
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+  border-radius: 50%;
+  
+  /* Quitamos el límite forzado de 180px para que respete el YAML */
+  width: 100% !important; 
+  height: auto !important;
+  
+  margin-bottom: 1rem;
+}
+
+/* 2. EL NOMBRE (H1) */
+.about-entity h1 {
+  font-size: 1.6rem !important; 
+  margin-bottom: 0.3rem !important;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* 3. EL SUBTÍTULO (Socióloga | PhD...) */
+.about-entity {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem !important;
+  line-height: 1.4;
+  text-align: center;
+  
+  /* Permitimos saltos de línea naturales */
+  white-space: normal !important; 
+  
+  /* Truco: Limitamos el ancho del texto al 90% para que no ensanche la barra */
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 4. LOS BOTONES */
+.about-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 10px; /* Un poco más de aire entre botones */
+  margin-top: 1rem;
+}
+
+.about-links .about-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  
+  border-radius: 50px !important;
+  padding: 0.4em 1.2em !important; /* Recuperamos un poco de padding vertical */
+  
+  font-family: 'Inter', sans-serif !important; 
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  background-color: transparent;
+}
+
+/* === GENERALES === */
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* Callouts */
+.callout {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+/* Imágenes contenido */
+main img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Listas */
+main .content ul li {
+  margin-bottom: 0.5rem; 
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  font-size: 0.9em;
+}

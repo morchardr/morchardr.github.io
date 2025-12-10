@@ -1,0 +1,91 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - files/
+website:
+  title: "Macarena Orchard Rieiro"
+  site-url: "https://morchard.github.io"
+  favicon: img/favicon.png 
+  
+  # SEO y Redes Sociales
+  open-graph:
+    title: "Macarena Orchard | Sociología de la Moral y Desigualdad"
+    description: "Portafolio académico. Profesora UDP y PhD University of Nottingham."
+    image: img/perfil.jpg
+    locale: es_CL
+  twitter-card:
+    image: img/perfil.jpg
+    card-style: summary_large_image
+    creator: "@MacarenaOrchard"
+
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Proyectos"
+        href: proyectos/index.qmd
+      - text: "Publicaciones"
+        href: publicaciones/index.qmd
+      - text: "Docencia"
+        href: docencia/index.qmd
+    right:
+      # --- BLOQUE DE CONTACTO Y REDES ---
+      # 1. Email (Contacto directo)
+      - icon: envelope
+        href: "mailto:macarena.orchard@mail.udp.cl"
+        aria-label: "Email"
+      
+      # 2. Perfiles Académicos (Scholar)
+      - icon: mortarboard
+        href: "https://scholar.google.com/citations?user=tu2UQaYAAAAJ&hl=es"
+        aria-label: "Google Scholar"
+      
+      # 3. Redes Profesionales y Divulgación (LinkedIn, X, Instagram)
+      - icon: linkedin
+        href: "https://cl.linkedin.com/in/macarena-orchard-a2a0a026b"
+        aria-label: "LinkedIn"
+      
+      - icon: twitter
+        href: "https://x.com/MacarenaOrchard"
+        aria-label: "X (Twitter)"
+        
+      - icon: instagram
+        href: "https://www.instagram.com/macarenaorchard/"
+        aria-label: "Instagram Académico"
+  
+  search: 
+    location: navbar
+    type: overlay
+  
+  page-footer:
+    left: '© 2025 Macarena Orchard Rieiro'
+    center: '' 
+    right: ''
+
+format:
+  html:
+    mainfont: "Inter"
+    monofont: "Fira Code"
+    fontsize: 1.1em
+    linestretch: 1.6
+    
+    theme:
+      light: [cosmo, styles-light.scss]
+      dark:  [cosmo, styles-dark.scss]
+    
+    toc: true
+    toc-title: "En esta página"
+    lang: es
+    
+    smooth-scroll: true
+    citations-hover: true
+    link-external-icon: true
+    link-external-newwindow: true
+    
+    include-in-header:
+      text: |
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+execute:
+  freeze: auto

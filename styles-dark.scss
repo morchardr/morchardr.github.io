@@ -1,0 +1,107 @@
+/*-- scss:defaults --*/
+
+/* 1. VARIABLES DARK */
+$brand-purple: #e0abe0;       /* Morado claro para contraste */
+$brand-bg-dark: #121212;      /* Negro suave */
+$brand-text-main: #ededed;    
+$brand-text-muted: #b0b3b8;   
+
+$body-bg: $brand-bg-dark;
+$body-color: $brand-text-main;
+$primary: $brand-purple;
+$link-color: $brand-purple;
+$link-hover-color: #ffffff;
+
+/* 2. VARIABLES NAVBAR DARK */
+$navbar-bg: rgba(18, 18, 18, 0.85);
+$navbar-fg: $brand-text-main;
+$navbar-brand-color: $brand-text-main;
+
+/*-- scss:rules --*/
+
+/* 3. IMPORTAR COMUNES */
+@import "common";
+
+/* 4. REGLAS ESPECÍFICAS (DARK) */
+
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.navbar {
+  background-color: $navbar-bg !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar .nav-link {
+  color: $brand-text-muted !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: $brand-purple !important;
+}
+
+/* Foto Perfil */
+img.about-image {
+  border: 2px solid rgba(224, 171, 224, 0.3); 
+  box-shadow: 0 0 30px rgba(224, 171, 224, 0.1) !important; 
+}
+
+/* Botones */
+.about-link {
+  color: $brand-purple !important;
+  border: 1px solid rgba(224, 171, 224, 0.5) !important;
+}
+
+.about-link:hover {
+  background-color: rgba(224, 171, 224, 0.1) !important;
+  color: #fff !important;
+  border-color: $brand-purple !important;
+  transform: translateY(-2px);
+}
+
+/* Callouts */
+.callout {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-left-width: 5px !important;
+  border-left-color: $brand-purple !important;
+}
+
+.callout .callout-header {
+  color: $brand-purple !important;
+  background-color: transparent !important;
+}
+
+.callout .callout-body {
+  color: $brand-text-muted !important;
+}
+
+/* Enlaces texto */
+main a {
+    color: $brand-purple;
+    text-decoration-color: rgba(224, 171, 224, 0.3);
+    transition: all 0.2s;
+}
+main a:hover {
+    color: #fff;
+    text-decoration-color: $brand-purple;
+}
+
+/* Footer Dark */
+.footer {
+  background-color: $brand-bg-dark !important;
+  color: $brand-text-muted !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer a {
+  color: $brand-purple !important; 
+  text-decoration: none;
+}
+
+/* === AJUSTES SIDEBAR DARK === */
+/* Solo cambiamos el color del nombre, la estructura la hereda de _common.scss */
+.about-entity h1 {
+  color: $brand-purple !important; 
+}

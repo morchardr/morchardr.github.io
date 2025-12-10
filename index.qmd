@@ -1,0 +1,51 @@
+---
+title: "Macarena Orchard Rieiro"
+subtitle: "Socióloga | PhD University of Nottingham"
+about:
+  template: trestles
+  image: img/perfil.jpg
+  image-width: 18em
+  image-shape: round
+  links:
+    # 1. CV: El documento más importante, destacado primero.
+    - icon: file-earmark-person
+      text: "Descargar CV"
+      href: files/cv-2023.pdf  
+    
+    # 2. Email: Siempre útil tenerlo a mano aquí también.
+    - icon: envelope
+      text: Email
+      href: "mailto:macarena.orchard@mail.udp.cl"
+    
+    # 3. ORCID: Identificador técnico (no es red social, va bien aquí).
+    - icon: orcid
+      text: ORCID
+      href: "https://orcid.org/0000-0001-8824-5528"
+      
+---
+
+## Biografía
+
+Soy **Profesora Asistente** en la [Escuela de Sociología](https://sociologia.udp.cl/) de la Universidad Diego Portales (UDP) e investigadora adjunta en el [ICSO-UDP](https://icso.udp.cl/). Actualmente, dirijo el [Magíster en Métodos para la Investigación Social](https://posgrados.udp.cl/programas/magister-en-metodos-para-la-investigacion-social/) de la misma universidad.
+
+Mi agenda de investigación explora las tensiones contemporáneas en la **sociología de la moral**, con un foco específico en la **economía política del respeto, la dignidad y la autoridad**. Me interesa comprender cómo las desigualdades estructurales moldean las experiencias subjetivas de trato, legitimidad y violencia en la sociedad chilena.
+
+### Investigación Actual
+
+Actualmente lidero como Investigadora Responsable el **Proyecto Fondecyt de Iniciación (PARES)**: *"Construyendo respeto y dignidad: un estudio sobre el movimiento de parto respetado"*. 
+
+En esta investigación utilizamos **metodologías mixtas** (encuestas longitudinales y entrevistas en profundidad) para analizar las expectativas de trato de las mujeres gestantes y las tensiones entre la autoridad médica y las demandas de autonomía reproductiva.
+
+::: {.callout-note appearance="minimal"}
+### Intereses de Investigación
+* Desigualdad Social y Subjetividad
+* Sociología del Respeto y la Dignidad
+* Métodos Mixtos de Investigación
+* Legitimidad y Autoridad
+:::
+
+### Formación Académica
+
+Me formé como socióloga en la **Universidad de Chile**. Posteriormente, obtuve mi *MA in Sociology* en la **University of Warwick** y mi Doctorado en Sociología en la **University of Nottingham** (Reino Unido), donde desarrollé la tesis *The Moral Economy of ‘Respect’ in Chilean Society*.
+
+
