@@ -10,3 +10,5 @@
 # !renv.lock
 # !_freeze/
 **/*.quarto_ipynb
+.Rhistory
+.Rproj.user/shared/notebooks/paths

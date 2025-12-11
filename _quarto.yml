@@ -21,7 +21,7 @@ website:
 
   navbar:
     left:
-      - text: "Inicio"
+      - text: "Sobre mí"
         href: index.qmd
       - text: "Proyectos"
         href: proyectos/index.qmd
