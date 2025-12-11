@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morchardr.github.io/sitemap.xml

@@ -5,10 +5,22 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+Thumbs.db
 
-# Mantener estos (son importantes)
-# !renv.lock
-# !_freeze/
-**/*.quarto_ipynb
-.Rhistory
-.Rproj.user/shared/notebooks/paths
+# --- RENV (Gestión de Paquetes) ---
+# Ignoramos la librería local (pesa mucho y es específica de tu PC)
+renv/library/
+renv/python/
+renv/staging/
+renv/local/
+
+# Pero nos aseguramos de que estos SÍ se suban (son el mapa para GitHub Actions)
+!renv.lock
+!renv/activate.R
+!renv/settings.json
+
+# --- QUARTO ---
+# _freeze DEBE subirse si usas 'freeze: auto'. 
+# Esto guarda los cálculos para que GitHub no tenga que ejecutar todo el R de nuevo.
+# Al no ponerlo aquí, git lo rastreará por defecto, lo cual es correcto.
