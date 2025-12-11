@@ -1,0 +1,169 @@
+<style>
+/* --- ESTILOS DE LIMPIEZA --- */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { 
+    display: none !important; 
+}
+body { 
+    top: 0px !important; 
+}
+html body .skiptranslate > iframe { 
+    visibility: hidden !important; 
+}
+.gtrans-slot { 
+    width: 0; height: 0; overflow: hidden; position: absolute; 
+}
+
+/* --- ESTILOS DEL BOTÓN (TIPO TEXTO) --- */
+.nav-item.gtrans-flag { 
+    display: flex; align-items: center; margin-left: 10px;
+}
+.nav-item.gtrans-flag a {
+    text-decoration: none; 
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    /* Ghost Button Style */
+    line-height: 1;
+    padding: 0.35rem 0.6rem; 
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.9;
+}
+
+.nav-item.gtrans-flag a:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+    transform: translateY(-1px);
+    opacity: 1;
+    text-decoration: none;
+}
+</style>
+
+<script>
+/**
+ * LÓGICA DE TRADUCCIÓN (CON PROTECCIÓN "NOTRANSLATE")
+ */
+
+// 1. Utilidades de Cookies
+function getCookie(name) {
+    const v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+    return v ? v[2] : null;
+}
+
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+    document.cookie = `${name}=${value};path=/;expires=${d.toGMTString()}`;
+}
+
+// 2. Determinar idioma actual
+function getCurrentLang() {
+    const cookieVal = getCookie('googtrans');
+    if (!cookieVal) return 'es'; 
+    const parts = decodeURIComponent(cookieVal).split('/');
+    return parts[parts.length - 1] || 'es';
+}
+
+// 3. Actualizar el Texto en la UI
+function updateFlagUI() {
+    const btn = document.getElementById('gtrans-flag-toggle');
+    if (!btn) return;
+    
+    const currentLang = getCurrentLang();
+    
+    if (currentLang === 'en') {
+        btn.textContent = 'ES'; 
+        btn.title = 'Volver a Español';
+    } else {
+        btn.textContent = 'EN';
+        btn.title = 'Switch to English';
+    }
+}
+
+// 4. Inyectar elementos en la Navbar
+function injectNavItems() {
+    const rightNav = document.querySelector('#quarto-header .navbar-nav.navbar-right, #quarto-header .navbar-nav.ms-auto');
+    
+    if (!rightNav) return false;
+    if (document.getElementById('gtrans-flag-toggle')) return true;
+
+    const liFlag = document.createElement('li');
+    liFlag.className = 'nav-item gtrans-flag';
+    
+    // === CAMBIO CRÍTICO AQUÍ ===
+    // Agregamos class="notranslate" y translate="no"
+    // Esto impide que Google convierta "ES" en "IS"
+    liFlag.innerHTML = `<a id="gtrans-flag-toggle" role="button" class="notranslate" translate="no">EN</a>`; 
+    
+    rightNav.appendChild(liFlag);
+
+    if (!document.getElementById('google_translate_element')) {
+        const divWidget = document.createElement('div');
+        divWidget.id = 'google_translate_element';
+        divWidget.className = 'gtrans-slot';
+        document.body.appendChild(divWidget); 
+    }
+    
+    return true;
+}
+
+// 5. Función principal de cambio de idioma
+function toggleLanguage() {
+    const current = getCurrentLang();
+    const target = (current === 'en') ? 'es' : 'en'; 
+    
+    const combo = document.querySelector('select.goog-te-combo');
+    if (combo) {
+        combo.value = target;
+        combo.dispatchEvent(new Event('change'));
+    } else {
+        setCookie('googtrans', `/auto/${target}`, 1);
+        location.reload();
+    }
+    
+    setTimeout(updateFlagUI, 200);
+}
+
+// 6. Callback de Google Translate
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+
+    initCustomWidget();
+}
+
+// 7. Lógica de inicialización
+function initCustomWidget() {
+    const checkInterval = setInterval(() => {
+        const injected = injectNavItems();
+        if (injected) {
+            updateFlagUI();
+            
+            const btn = document.getElementById('gtrans-flag-toggle');
+            if (btn) {
+                const newBtn = btn.cloneNode(true);
+                btn.parentNode.replaceChild(newBtn, btn);
+                
+                newBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleLanguage();
+                });
+                
+                clearInterval(checkInterval); 
+            }
+        }
+    }, 500); 
+}
+
+window.googleTranslateElementInit = googleTranslateElementInit;
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

@@ -5,7 +5,7 @@ project:
 
 website:
   title: "Macarena Orchard Rieiro"
-  site-url: "https://morchardr.github.io" # URL actualizada correctamente
+  site-url: "https://morchardr.github.io"
   favicon: img/favicon.png 
   
   # SEO y Redes Sociales
@@ -29,10 +29,11 @@ website:
         href: publicaciones/index.qmd
       - text: "Docencia"
         href: docencia/index.qmd
-      - text: "Blog"     # Sección Blog Agregada
+      - text: "Blog"
         href: blog.qmd
     right:
-      # --- BLOQUE DE CONTACTO Y REDES ---
+      # NOTA: El botón de idioma se inserta automáticamente por el script
+      
       - icon: envelope
         href: "mailto:macarena.orchard@mail.udp.cl"
         aria-label: "Email"
@@ -74,9 +75,12 @@ format:
     citations-hover: true
     link-external-icon: true
     link-external-newwindow: true
-    include-in-header:
-      text: |
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    # AQUÍ CONECTAMOS EL TRADUCTOR
+    include-in-header: 
+      - text: |
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+      - translate.html
 
 execute:
   freeze: auto
