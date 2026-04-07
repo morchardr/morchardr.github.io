@@ -21,6 +21,7 @@ renv/local/
 !renv/settings.json
 
 # --- QUARTO ---
-# _freeze DEBE subirse si usas 'freeze: auto'. 
+# _freeze DEBE subirse si usas 'freeze: auto'.
 # Esto guarda los cálculos para que GitHub no tenga que ejecutar todo el R de nuevo.
 # Al no ponerlo aquí, git lo rastreará por defecto, lo cual es correcto.
+**/*.quarto_ipynb
